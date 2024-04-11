@@ -1,6 +1,6 @@
 {
     "watch": ["src"],
-    "ext": "ts,json",
+    "ext": "ts,json,js",
     "ignore": [],
     "exec": "ts-node-dev --respawn src/index.ts"
 }

@@ -1,5 +1,5 @@
 services:
-  glados_database:
+  bereal_database:
     image: postgres:13
     env_file:
       - .env
@@ -16,5 +16,5 @@ services:
     env_file:
       - .env
     depends_on:
-      - glados_database
+      - bereal_database
     restart: always

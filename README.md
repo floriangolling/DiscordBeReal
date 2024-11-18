@@ -24,7 +24,6 @@ Ensure you set the following variables in your `.env` file:
 | `POSTGRES_DB`         | -             | The name of the PostgreSQL database.                                     |
 | `POSTGRES_HOST`       | -             | The host of the PostgreSQL database, typically the service name in Docker Compose. |
 | `POSTGRES_PORT`       | -             | The port on which PostgreSQL is running.                                 |
-| `PORT`                | -             | Exposed port outside docker compose                                      |
 
 ## Docker Setup
 

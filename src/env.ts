@@ -26,7 +26,6 @@ const envSchema = z.object({
         .default('false'),
     NODE_ENV: z.string().default('dev'),
     DISCORD_APP_ID: z.string(),
-    PORT: z.string().transform((val) => parseInt(val, 10)),
 });
 
 // eslint-disable-next-line consistent-return

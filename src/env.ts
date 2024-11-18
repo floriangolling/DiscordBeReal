@@ -4,20 +4,26 @@ import { z } from 'zod';
 dotenv.config();
 
 const envSchema = z.object({
-    SEQUELIZE_LOGGING: z.string().transform((val) => {
-        const lower = val.toLowerCase();
-        return lower === 'true' || lower === '1';
-    }).default('false'),
+    SEQUELIZE_LOGGING: z
+        .string()
+        .transform((val) => {
+            const lower = val.toLowerCase();
+            return lower === 'true' || lower === '1';
+        })
+        .default('false'),
     POSTGRES_USER: z.string(),
     POSTGRES_PASSWORD: z.string(),
     POSTGRES_DB: z.string(),
     POSTGRES_HOST: z.string(),
     POSTGRES_PORT: z.string(),
     DISCORD_TOKEN: z.string(),
-    DEBUG: z.string().transform((val) => {
-        const lower = val.toLowerCase();
-        return lower === 'true' || lower === '1';
-    }).default('false'),
+    DEBUG: z
+        .string()
+        .transform((val) => {
+            const lower = val.toLowerCase();
+            return lower === 'true' || lower === '1';
+        })
+        .default('false'),
     NODE_ENV: z.string().default('dev'),
     DISCORD_APP_ID: z.string(),
     PORT: z.string().transform((val) => parseInt(val, 10)),

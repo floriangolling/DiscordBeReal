@@ -4,7 +4,7 @@ services:
     env_file:
       - .env
     ports:
-      - "5445:5432"
+      - "5535:5432"
     volumes:
       - ./data:/var/lib/postgresql/data
   glados_backend:
@@ -12,7 +12,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "${PORT}:8080"
+      - "8085:8085"
     env_file:
       - .env
     depends_on:

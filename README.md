@@ -24,13 +24,7 @@ Ensure you set the following variables in your `.env` file:
 | `POSTGRES_DB`         | -             | The name of the PostgreSQL database.                                     |
 | `POSTGRES_HOST`       | -             | The host of the PostgreSQL database, typically the service name in Docker Compose. |
 | `POSTGRES_PORT`       | -             | The port on which PostgreSQL is running.                                 |
-| `SAURON_TOKEN`        | -             | A token for the Sauron service (assumed to be another API or service).   |
-| `GUILD_ID`            | -             | The ID of the Discord guild (server) the bot operates in.                |
-| `BOT_MAILER`          | -             | The email address used by the bot for sending emails.                    |
-| `BOT_MAILER_PASSWORD` | -             | The password for the bot's email address.                                |
-| `BOT_MAILER_SERVICE`  | gmail         | The email service provider (e.g., `gmail`).                              |
 | `PORT`                | -             | Exposed port outside docker compose                                      |
-| `DISCORD_MAKER`       | -             | The email adresses of administrator separated by ;                       |
 
 ## Docker Setup
 

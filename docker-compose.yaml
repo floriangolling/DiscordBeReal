@@ -1,6 +1,20 @@
-version: '3'
 services:
-  app:
+  glados_database:
+    image: postgres:13
+    env_file:
+      - .env
+    ports:
+      - "5445:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+  glados_backend:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - "${PORT}:8080"
+    env_file:
+      - .env
+    depends_on:
+      - glados_database
+    restart: always

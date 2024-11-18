@@ -1,3 +1,0 @@
-- symbols Typescript so improt can be like this @commands/index..
-- create a Proper way to link execute function to their interaction (look @client/commands/index)
-- You can modify the architecture if you find a proper way never did actual discord bot before

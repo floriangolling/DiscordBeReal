@@ -7,7 +7,7 @@ const envSchema = z.object({
     SEQUELIZE_LOGGING: z.string().transform((val) => {
         const lower = val.toLowerCase();
         return lower === 'true' || lower === '1';
-    }),
+    }).default('false'),
     POSTGRES_USER: z.string(),
     POSTGRES_PASSWORD: z.string(),
     POSTGRES_DB: z.string(),
@@ -17,15 +17,10 @@ const envSchema = z.object({
     DEBUG: z.string().transform((val) => {
         const lower = val.toLowerCase();
         return lower === 'true' || lower === '1';
-    }),
-    NODE_ENV: z.string(),
-    GUILD_ID: z.string(),
+    }).default('false'),
+    NODE_ENV: z.string().default('dev'),
     DISCORD_APP_ID: z.string(),
-    BOT_MAILER: z.string(),
-    BOT_MAILER_PASSWORD: z.string(),
-    BOT_MAILER_SERVICE: z.string(),
     PORT: z.string().transform((val) => parseInt(val, 10)),
-    DISCORD_MAKER: z.string().transform((val) => val.split(';')),
 });
 
 // eslint-disable-next-line consistent-return
